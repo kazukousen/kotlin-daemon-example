@@ -1,0 +1,10 @@
+/var/log/ktd/*.log {
+	daily
+	rotate 7
+	missingok
+	notifempty
+	compress
+	postrotate
+		/sbin/service ktd restart
+	endscript
+}
